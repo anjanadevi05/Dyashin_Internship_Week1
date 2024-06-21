@@ -1,0 +1,42 @@
+body{
+    font-family:Serif,'Times New Roman';
+    background-color: white;
+}
+h1{
+    text-align: center;
+    color:black;
+    font-family: Serif;
+    font-weight: bold;
+}
+.line{
+    margin: 10px;
+    border-bottom: 3px solid red;
+}
+.type{
+    font-size: 20px;
+    margin-right: 10px;
+}
+form{
+    margin: 40px;
+    font-size: 20px;
+    align-items: center;
+}
+input[type="text"],input[type="tel"],input[type="date"],input[type="time"]{
+    padding:5px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+textarea{
+    margin-left: 20px;
+    align-items: center;
+}
+.Query{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.type span{
+    margin-left: 20px;
+}
+input[type="checkbox"]{
+    margin-left: 130px;
+}
