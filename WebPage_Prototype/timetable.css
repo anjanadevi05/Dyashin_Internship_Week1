@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, Serif,'Times New Roman';
+    background-color: white;
+}
+h1{
+    text-align: center;
+    color:black;
+    font-family: Serif;
+    font-weight: 500;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin:auto;
+    border: 5px solid;
+    border-left-color: grey;
+    border-top-color: grey;
+    border-bottom-color: black;
+    border-right-color: black;
+    
+
+}
+table th{
+    border: 1px solid;
+    font-style: bold;
+    margin:auto;
+    width: 100px;
+    padding: 10px;
+    border-color: black;
+    white-space: nowrap;
+    text-align: center;
+}
+table td{
+    border: 1px solid;
+    padding: 10px;
+    border-color: black;
+    text-align: center;
+    white-space: nowrap;
+}
+table td[rowspan="6"]{
+    font-family:Serif; 
+    font-weight: bold;
+    text-align: center;
+}

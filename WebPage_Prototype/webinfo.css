@@ -1,0 +1,33 @@
+body{
+    font-family: Serif;
+    background-color: white;
+}
+h1{
+    text-align: center;
+    color: black;
+    font-family: Serif;
+    font-weight:300px;
+    font-size: 18px;
+}
+table{
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 95%;
+    border:1px solid black;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+table th{
+    border:1px solid black;
+    text-align: center;
+    padding: 10px;
+    font-weight:normal;
+    font-size: 15px;
+}
+table td{
+    border: 1px solid;
+    padding: 10px;
+    border-color: black;
+    text-align: center;
+}
