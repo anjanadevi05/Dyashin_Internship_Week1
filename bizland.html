@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bizland Prototype</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.1.0/css/glightbox.min.css">
+        <style>
+          .portfolio-item {
+              position: relative;
+              overflow: hidden;
+          }
+          .portfolio-info,.social-icons {
+              position: absolute;
+              left:50%;
+              width:100%;
+              transform: translateX(-50%);
+              background: rgba(255, 255, 255, 0.9); 
+              color: black;
+              padding: 5px 10px;
+              border-radius: 5px;
+              opacity: 0;
+              transition: opacity 0.5s ease-in-out;
+          }
+          .portfolio-item:hover .portfolio-info {
+              bottom: 0;
+              opacity: 1;
+          }
+          .filter-active {
+            background-color: #106eea;
+            color: white !important;
+          }
+          .card:hover .social-icons {
+            opacity: 1;
+            bottom:30%;
+          }
+          
+      </style>
+    </head>
+    <body>
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 60px;">
+        
+        <div class="container-fluid" style="width: 500px;height:50px;float:left;margin-left:50px;" >
+
+          <a class="navbar-brand" href="#"><h1>BizLand<span style="color: #106eea;">.</span></h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="width: 700px;height:80px;float:left;margin-left:300px;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" style="margin-right: 20px;">
+                <a class="nav-link active" aria-current="page" href="#main" style="color:#106eea;">Home</a>
+              </li>
+              <li class="nav-item" style="margin-right: 20px;">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item" style="margin-right: 20px;">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item dropdown" style="margin-right: 20px;">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#106eea;">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownDeep" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Deep Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownDeep">
+                      <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                  <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                  <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+                </ul>
+              </li>
+              
+                
+              
+              <li class="nav-item" style="margin-right: 20px;">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+      <section id="main" class="hero section" style="margin-bottom: 20px;">
+        <div style="width: 100%;height:520px;background: url(https://bootstrapmade.com/demo/templates/BizLand/assets/img/hero-bg.jpg) ;background-size: cover; margin-bottom: 20px;">
+          <div style="width:50%;margin-left: 100px;justify-content: center;justify-content: center;">
+            <h1 style="color: black;font-family: Arial;font-weight: 600;font-size: 55px;padding-top: 175px;">Welcome to <span style="color: #106eea;">BizLand</span></h1>
+            <p style="color: grey;font-family: Arial;font-weight: 300;font-size: 20px;">We are team of talented designers making websites with <br>Bootstrap</p>
+            <div class="d-flex">
+              <button type="button" class="btn btn-primary btn-lg" style="background:#106eea;width:175px;color: white;font-size: 17px;font-weight: 300;">Get Started</button>
+              <a href="#" class="glightbox btn-watch-video d-flex align-items-center" style="color: #454545; text-decoration: none;font-size: 18px; font-weight: 500;margin-left: 20px;"><i class="bi bi-play-circle" style="margin-left: 10px;margin-right: 10px;font-size: 2rem;color: #106eea;"></i><span>Watch Video</span></a>
+  
+            </div>
+            
+          </div>
+  
+        </div>
+
+      </section>
+      <section id="portfolio" class="portfolio section">
+        <div class="container section-title" data-aos="fade" style="justify-content: center;">
+          <h2 class="badge rounded-pill bg-info text-dark" style="color: #ddddff; margin-top: 40px; margin-left: 500px;padding: 10px;padding-left: 15px;padding-right: 15px;">PORTFOLIO</h2>
+          <p style="font-family: serif;color: black;font-weight: 800;font-size: 50px;align-content: center;margin-left: 350px;">Check Our <span class="description-title" style="color: #106eea;"> Portfolio</span></p>
+        </div>
+        <div class="container" style="font-family: serif;font-weight: 600;font-size: 20px;align-content: center;">
+          <div class="isotope-layout"  data-default-filter="*" data-layout="masonry" data-sort="original-order" style="text-align: center;">
+          <div class="portfolio-filters" style="text-align: center; margin-bottom: 30px;" data-aos="fade-up" data-aos-delay="100">
+            <button type="button" class="btn btn-primary filter-active" data-filter="*" style="padding: 10px;padding-left: 20px;padding-right: 20px;font-weight: 600;color: white;background-color: #106eea;">All</button>
+            <button type="button" class="btn btn-outline-primary" style="margin-left: 25px;padding: 10px;padding-left: 15px;padding-right: 15px;font-weight: 600;color: black;" data-filter=".filter-app">App</button>
+            <button type="button" class="btn btn-outline-primary" style="margin-left: 25px;padding: 10px;padding-left: 15px;padding-right: 15px;font-weight: 600;color: black;" data-filter=".filter-product">Card</button>
+            <button type="button" class="btn btn-outline-primary" style="margin-left: 25px;padding: 10px;padding-left: 15px;padding-right: 15px;font-weight: 600;color: black;" data-filter=".filter-branding">Web</button>
+
+          </div>
+          
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200" style="margin-top: 30px;">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in" style="font-size: 1.5rem;color: black"></i></a>
+                <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg" style="font-size: 1.5rem;color: black"></i></a>
+              </div>
+            </div>
+            
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 1</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                  <a href="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in" style="font-size: 1.5rem;color: black"></i></a>
+                  <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg" style="font-size: 1.5rem;color: black"></i></a>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 1</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                  <a href="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in" style="font-size: 1.5rem;color: black"></i></a>
+                  <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg" style="font-size: 1.5rem;color: black"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                  <a href="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in "style="font-size: 1.5rem;color: black"></i></a>
+                  <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg " style="font-size: 1.5rem;color: black"></i></a>
+                </div>
+              </div>
+  
+              
+  
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 2</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                  <a href="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in" style="font-size: 1.5rem;color: black"></i></a>
+                  <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg" style="font-size: 1.5rem;color: black"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                  <a href="ahttps://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in" style="font-size: 1.5rem;color: black"></i></a>
+                  <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg" style="font-size: 1.5rem;color: black"></i></a>
+                </div>
+              </div>
+  
+  
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                  <a href="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in" style="font-size: 1.5rem;color: black"></i></a>
+                  <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg" style="font-size: 1.5rem;color: black"></i></a>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                  <a href="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in" style="font-size: 1.5rem;color: black"></i></a>
+                  <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg" style="font-size: 1.5rem;color: black"></i></a>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                  <a href="https://bootstrapmade.com/demo/templates/BizLand/assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in" style="font-size: 1.5rem;color: black"></i></a>
+                  <a href="D:/Intern/bizland_prototype/BizLand/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg" style="font-size: 1.5rem;color: black"></i></a>
+                </div>
+              </div>
+          </div>
+          </div>
+
+      </div>
+      </section>
+      <section id="team" class="team section">
+        <div class="container section-title" data-aos="fade" style="justify-content: center;">
+          <h2 class="badge rounded-pill bg-info text-dark" style="color: #ddddff; margin-top: 40px; margin-left: 500px;padding: 10px;padding-left: 15px;padding-right: 15px;">TEAM</h2>
+          <p style="font-family: serif;color: black;font-weight: 800;font-size: 50px;align-content: center;margin-left: 300px;">Our Hardworking <span class="description-title" style="color: #106eea;"> Team</span></p>
+        </div>
+        <div class="container d-flex justify-content-between flex-wrap">
+          <div class="card" style="width: 23%;position:relative">
+            <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/team/team-1.jpg" class="card-img-top" alt="...">
+            
+            <div class="card-body">
+              <div class="social-icons">
+                <a href=""><i class="bi bi-twitter-x" style="color: black;margin-left: 50px;"></i></a>
+                <a href=""><i class="bi bi-facebook" style="color: black; margin-left: 25px;"></i></a>
+                <a href=""><i class="bi bi-instagram" style="color: black; margin-left: 25px;"></i></a>
+                <a href=""><i class="bi bi-linkedin" style="color: black; margin-left: 25px;"></i></a>
+              </div>
+
+              <p class="card-text" style="text-align: center; color:grey;font-weight: 700;font-size: 25px;font-family: serif;">Walter White<br><span style="text-align: center; color:grey;font-weight: 500;font-size: 15px;">Chief Executive Officer</span></p>
+            </div>
+          </div>
+          <div class="card" style="width: 23%;">
+            <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/team/team-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="social-icons">
+                <a href=""><i class="bi bi-twitter-x" style="color: black;margin-left: 50px;"></i></a>
+                <a href=""><i class="bi bi-facebook" style="color: black; margin-left: 25px;"></i></a>
+                <a href=""><i class="bi bi-instagram" style="color: black; margin-left: 25px;"></i></a>
+                <a href=""><i class="bi bi-linkedin" style="color: black; margin-left: 25px;"></i></a>
+              </div>
+              <p class="card-text" style="text-align: center; color:grey;font-weight: 700;font-size: 25px;font-family: serif;">Sarah Jhonson<br><span style="text-align: center; color:grey;font-weight: 500;font-size: 15px;">Product Manager</span></p>
+            </div>
+          </div>
+          <div class="card" style="width: 23%;">
+            <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/team/team-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="social-icons">
+                <a href=""><i class="bi bi-twitter-x" style="color: black;margin-left: 50px;"></i></a>
+                <a href=""><i class="bi bi-facebook" style="color: black; margin-left: 25px;"></i></a>
+                <a href=""><i class="bi bi-instagram" style="color: black; margin-left: 25px;"></i></a>
+                <a href=""><i class="bi bi-linkedin" style="color: black; margin-left: 25px;"></i></a>
+              </div>
+              <p class="card-text" style="text-align: center; color:grey;font-weight: 700;font-size: 25px;font-family: serif;">William Anderson<br><span style="text-align: center; color:grey;font-weight: 500;font-size: 15px;">CTO</span></p>
+            </div>
+          </div>
+          <div class="card" style="width: 23%;">
+            <img src="https://bootstrapmade.com/demo/templates/BizLand/assets/img/team/team-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="social-icons">
+                <a href=""><i class="bi bi-twitter-x" style="color: black;margin-left: 50px;"></i></a>
+                <a href=""><i class="bi bi-facebook" style="color: black; margin-left: 25px;"></i></a>
+                <a href=""><i class="bi bi-instagram" style="color: black; margin-left: 25px;"></i></a>
+                <a href=""><i class="bi bi-linkedin" style="color: black; margin-left: 25px;"></i></a>
+              </div>
+              <p class="card-text" style="text-align: center; color:grey;font-weight: 700;font-size: 25px;font-family: serif;">Amanda Jepson<br><span style="text-align: center; color:grey;font-weight: 500;font-size: 15px;">Accountant</span></p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section id="contact" class="contact section">
+        <div class="container section-title" data-aos="fade" style="justify-content: center;">
+          <h2 class="badge rounded-pill bg-info text-dark" style="color: #ddddff; margin-top: 40px; margin-left: 500px;padding: 10px;padding-left: 15px;padding-right: 15px;">CONTACT</h2>
+          <p style="font-family: serif;color: black;font-weight: 800;font-size: 50px;align-content: center;margin-left: 300px;">Need Help?<span class="description-title" style="color: #106eea;"> Contact Us</span></p>
+        </div>
+        <div class="container">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Your Name</label>
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Your Email</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="inputAddress">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary" style="align-items: center;margin-left: 500px;margin-bottom: 10px;">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Isotope
+            var iso = new Isotope('.isotope-container', {
+                itemSelector: '.isotope-item',
+                layoutMode: 'fitRows'
+            });
+        
+            // Bind filter button click
+            var filtersElem = document.querySelector('.portfolio-filters');
+            filtersElem.addEventListener('click', function (event) {
+                if (!matchesSelector(event.target, 'button')) {
+                    return;
+                }
+                var filterValue = event.target.getAttribute('data-filter');
+                iso.arrange({ filter: filterValue });
+        
+                // Change active class
+                var activeButton = filtersElem.querySelector('.filter-active');
+                if (activeButton) {
+                    activeButton.classList.remove('filter-active');
+                }
+                event.target.classList.add('filter-active');
+            });
+        });
+        </script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.1.0/glightbox.min.js"></script>
+      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/isotope-layout/3.0.6/isotope.pkgd.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
